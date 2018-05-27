@@ -27,7 +27,6 @@ class HomeController extends BaseController
             $result = mail($adminEmail, $subject, $message);
             if ($result)
             {
-                Messages::addMessage($name, $email, $phone, $content);
                 echo "<div class='alert alert-success modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageSuccess') . "</div>";
                 return true;
             }
