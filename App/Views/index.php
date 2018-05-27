@@ -1,3 +1,6 @@
+<?php
+use App\Components\Dict as L;
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +51,7 @@
           </p>
           <p>
             <i class="fa fa-clock-o"></i>
-            <span>В будние дни с 8:00 до 18:00 Eastern Time</span>
+            <span><?=L::_('wHours')?></span>
           </p>
         </div>
       </div>
@@ -58,14 +61,14 @@
   <article class="main-banner">
     <div class="container">
       <h1 class="text-center">
-        Обеспечиваем грузовой транспорт постоянной работой по территории США, гарантированные рейты от 2$ за милю и выше.
+        <?=L::_('mainHeader')?>
       </h1>
     </div>
   </article>
   <article class="trucks">
     <div class="container">
       <h2 class="box-heading text-center">
-        Работаем с разными видами траков
+        <?=L::_('trucksServe')?>
       </h2>
       <div class="row">
         <div class="col-md-3 truck box-with-pic">
@@ -103,10 +106,10 @@
             <img src="/assets/img/garanty.png" alt="">
           </div>
           <h4 class="text-center">
-            Гарантия пробега
+              <?=L::_('guarantee')?>
           </h4>
           <p class="text">
-            Наша квалифицированная команда обеспечивает стабильной работой достаточно большой автопарк траков.
+              <?=L::_('guaranteeText')?>
           </p>
         </div>
         <div class="col-md-4 box-with-pic">
@@ -114,10 +117,10 @@
             <img src="/assets/img/menedzher.png" alt="">
           </div>
           <h4 class="text-center">
-            Персональный подход к каждому клиенту:
+              <?=L::_('personalApproach')?>
           </h4>
           <p class="text">
-            За каждым автомобилем закреплен персональный менеджер, в обязанности которого входит поиск грузов и их сопровождение протяжении всех рейсов, работа с документацией, планирование маршрутов, решение спорных ситуаций и вопросов.
+              <?=L::_('personalApproachText')?>
           </p>
         </div>
         <div class="col-md-4 box-with-pic">
@@ -125,10 +128,10 @@
             <img src="/assets/img/Service.png" alt="">
           </div>
           <h4 class="text-center">
-            Сервис
+              <?=L::_('service')?>
           </h4>
           <p class="text">
-            Два года успешной работы на рынке США позволяют нам гарантировать качество обслуживания и высокий уровень сервиса. НАШ РЕЗУЛЬТАТ - ВАША ПРИБЫЛЬ.
+              <?=L::_('serviceText')?>
           </p>
         </div>
       </div>
@@ -138,28 +141,28 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="text-center">ОСТАВЬТЕ ЗАЯВКУ</h2>
-          <p class="text-center">И наш менеджер перезвонит вам для уточнения дополнительной информации.</p>
+          <h2 class="text-center"><?=L::_('feedback')?></h2>
+          <p class="text-center"><?=L::_('feedbackText')?></p>
           <div class="form">
             <form id="contact-form" class="form form-horizontal">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" required placeholder="Имя">
+                <input type="text" name="name" class="form-control" required placeholder="<?=L::_('name')?>">
                 <span id="name"></span>
               </div>
               <div class="form-group">
-                <input type="email" name="email" class="form-control" required placeholder="Электронная почта">
+                <input type="email" name="email" class="form-control" required placeholder="<?=L::_('email')?>">
                 <span id="email"></span>
               </div>
               <div class="form-group">
-                <input type="text" name="phone" class="form-control" required placeholder="Телефон">
+                <input type="text" name="phone" class="form-control" required placeholder="<?=L::_('phone')?>">
                 <span id="phone"></span>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="text" placeholder="Текст"></textarea>
+                <textarea class="form-control" name="text" placeholder="<?=L::_('text')?>"></textarea>
               </div>
               <button type="submit" class="btn btn-primary send-email">
                 <i class="fa fa-check"></i>
-                Отправить
+                  <?=L::_('submit')?>
               </button>
             </form>
           </div>
@@ -170,7 +173,7 @@
   <article class="about">
     <div class="container">
       <h3>
-        WindroseFreight — компания, которая специализируется на автомобильных грузоперевозках, успешно работающая на рынке США более двух лет при сотрудничестве с рядом перевозчиков с собственным грузовым транспортом. Наша команда - профессионалы, готовые прийти вам на помощь в любой момент.
+          <?=L::_('about')?>
       </h3>
     </div>    
   </article>  
@@ -194,12 +197,15 @@
     </div>
   </div>
 </footer>
+<div class="results"></div>
 <script type="text/javascript" src="/assets/js/common.js"></script>
 <script type="text/javascript" src="/assets/js/validate.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 <script type="text/javascript">
   $(function() {
-    App.Page.Main();
+    App.Page.Main({
+      url: 'email-us'
+    });
   });
 </script>
 </body>

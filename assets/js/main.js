@@ -34,15 +34,16 @@
       });
     },
     send: function() {
-      var msg   = this.contactForm.serialize();
+      var self = this,
+          msg   = this.contactForm.serialize();
       $.ajax({
         type: 'POST',
         url: this.options.url,
         data: msg,
         success: function(data) {
           $('.results').html(data);
-          this.setTimeout();
-          this.contactForm[0].reset();
+          self.setTimeout();
+          self.contactForm[0].reset();
         },
         error:  function(xhr, str){
           console.log('Error: ' + xhr.responseCode);
