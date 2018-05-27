@@ -22,9 +22,9 @@ class HomeController extends BaseController
         if (!empty($name) && !empty($email) && !empty($phone))
         {
             $adminEmail = 'for.spam.kolia@mail.ru';
-            $message = "Від {$name}. Email: {$email}. Текст: {$content}.";
+            $message = "Від <strong>{$name}</strong>.<br> Email: <strong>{$email}</strong>.<br> Телефон: <strong>{$phone}</strong>. <br>Текст: <p>{$content}.</p>";
             $subject = 'Із сайту';
-            $result = mail($adminEmail, $subject, $message);
+            $result = mail($adminEmail, $subject, $message, "Content-Type: text/html; charset=UTF-8");
             if ($result)
             {
                 echo "<div class='alert alert-success modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageSuccess') . "</div>";
