@@ -77,6 +77,10 @@ nav.navbar .lang-switcher a:not(:last-child) {
 }
 nav.navbar .lang-switcher a img {
   width: 50px;
+  filter: grayscale(60%);
+}
+nav.navbar .lang-switcher a.active img {
+  filter: none;
 }
 nav.navbar .contacts p {
   font-size: 16px;

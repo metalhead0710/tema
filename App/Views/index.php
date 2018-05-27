@@ -26,11 +26,11 @@
           <img src="/assets/img/logo.png" class="img-responsive" alt="" />
         </div>
         <div class="col-md-6 lang-switcher">
-          <a href="">
-            <img src="/assets/img/en.png" alt="English" />
-          </a>
-          <a href="">
+          <a href="/" class="<?=($_SESSION['lang'] === 'ru') ? 'active' : ''?>">
             <img src="/assets/img/ru.png" alt="Русский" />
+          </a>
+          <a href="/en/" class="<?=($_SESSION['lang'] === 'en') ? 'active' : ''?>">
+            <img src="/assets/img/en.png" alt="English" />
           </a>
         </div>
         <div class="col-md-4 contacts">
