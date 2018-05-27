@@ -5,7 +5,8 @@
 
     options: {
       url: null,
-      required: null
+      required: null,
+      notValidEmail: null
     },
 
     init: function(options, root) {
@@ -22,10 +23,15 @@
     bindHandlers: function() {
       var self = this;
 
-      this.sendEmail.on('click', function(e) {
+      this.sendEmail.on('click', function() {
         self.contactForm.validate({
-          email: {
-            message: {required: 'wth'}
+          messages: {
+            name: self.options.required,
+            email: {
+              required: self.options.required,
+              email: self.options.notValidEmail
+            },
+            phone: self.options.required
           },
           submitHandler: function() {
             self.send();

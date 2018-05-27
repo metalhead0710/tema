@@ -146,19 +146,19 @@ use App\Components\Dict as L;
           <div class="form">
             <form id="contact-form" class="form form-horizontal">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" required placeholder="<?=L::_('name')?>">
+                <input type="text" name="name" id="name" class="form-control" required placeholder="<?=L::_('name')?>">
                 <span id="name"></span>
               </div>
               <div class="form-group">
-                <input type="email" name="email" class="form-control" required placeholder="<?=L::_('email')?>">
+                <input type="email" name="email" id="email" class="form-control" required placeholder="<?=L::_('email')?>">
                 <span id="email"></span>
               </div>
               <div class="form-group">
-                <input type="text" name="phone" class="form-control" required placeholder="<?=L::_('phone')?>">
+                <input type="text" name="phone" id="phone" class="form-control" required placeholder="<?=L::_('phone')?>">
                 <span id="phone"></span>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="text" placeholder="<?=L::_('text')?>"></textarea>
+                <textarea class="form-control" name="text" id="text" placeholder="<?=L::_('text')?>"></textarea>
               </div>
               <button type="submit" class="btn btn-primary send-email">
                 <i class="fa fa-check"></i>
@@ -204,7 +204,9 @@ use App\Components\Dict as L;
 <script type="text/javascript">
   $(function() {
     App.Page.Main({
-      url: 'email-us'
+      url: 'email-us',
+      required: "<?=L::_('requiredField')?>",
+      notValidEmail: "<?=L::_('notValidEmail')?>"
     });
   });
 </script>
