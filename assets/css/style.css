@@ -113,7 +113,7 @@ article {
 }
 .main-banner h1 {
   color: #eee;
-  font-size: 50px;
+  font-size: 2.5rem;
 }
 .trucks {
   background-color: #f5f5f5;
@@ -155,6 +155,10 @@ article {
   width: 65%;
   margin: 0 auto;
 }
+.feedback .form .form-horizontal .form-group {
+  margin-left: 0;
+  margin-right: 0;
+}
 .feedback form input,
 .feedback form textarea {
   border-radius: 0;
@@ -183,7 +187,7 @@ article {
   background-size: cover;
 }
 .about h3 {
-  font-size: 34px;
+  font-size: 4rem;
   color: #fff;
   text-align: justify;
   line-height: 1.5;
@@ -204,5 +208,31 @@ footer a {
 input.has-error,
 textarea.has-error {
   outline: 1px solid #f3313a;
+}
+@media (max-width: 992px) {
+  nav.navbar .logo img {
+    width: 100%;
+  }
+  .box-with-pic {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .trucks .truck .image {
+    height: auto;
+    margin-bottom: 25px;
+  }
+  .feedback .form {
+    width: 100%;
+  }
+  .about h3 {
+    font-size: 2rem;
+  }
+  footer {
+    text-align: center;
+  }
+  footer .pull-left,
+  footer .pull-right {
+    float: none !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
