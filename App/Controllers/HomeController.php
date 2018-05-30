@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Components\Controller as BaseController;
 use App\Components\Dict;
+use App\Components\Controller as BaseController;
 
 class HomeController extends BaseController
 {
@@ -19,25 +19,21 @@ class HomeController extends BaseController
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $content = $_POST['text'];
-        if (!empty($name) && !empty($email) && !empty($phone))
-        {
+        if (!empty($name) && !empty($email) && !empty($phone)) {
             $adminEmail = 'for.spam.kolia@mail.ru';
             $message = "Від <strong>{$name}</strong>.<br> Email: <strong>{$email}</strong>.<br> Телефон: <strong>{$phone}</strong>. <br>Текст: <p>{$content}.</p>";
             $subject = 'Із сайту';
             $result = mail($adminEmail, $subject, $message, "Content-Type: text/html; charset=UTF-8");
-            if ($result)
-            {
+            if ($result) {
                 echo "<div class='alert alert-success modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageSuccess') . "</div>";
+
                 return true;
-            }
-            else
-            {
+            } else {
                 echo "<div class='alert alert-danger modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageError') . "</div>";
+
                 return false;
             }
-        }
-        else
-        {
+        } else {
             echo "<div class='alert alert-danger modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageNotValid') . "</div>";
         }
     }

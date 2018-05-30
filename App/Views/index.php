@@ -26,7 +26,6 @@ use App\Components\Url;
 <body>
 <header>
   <nav class="navbar navbar-default">
-
       <div class="container">
         <div class="col-md-2 logo">
           <img src="/assets/img/logo.png" class="img-responsive" alt="" />
@@ -205,19 +204,11 @@ use App\Components\Url;
 <script type="text/javascript" src="/assets/js/validate.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
 <script type="text/javascript">
-  $(function() {
-    App.Page.Main({
-      url: 'email-us',
-      required: "<?=L::_('requiredField')?>",
-      notValidEmail: "<?=L::_('notValidEmail')?>"
-    });
+  App.Page.Main({
+    url: 'email-us',
+    required: "<?=L::_('requiredField')?>",
+    notValidEmail: "<?=L::_('notValidEmail')?>"
   });
 </script>
 </body>
 </html>
-
-
-
-
-
-

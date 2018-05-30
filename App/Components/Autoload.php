@@ -2,5 +2,5 @@
 
 spl_autoload_register(function ($class) {
     $class = str_replace('\\', DS, $class);
-	include APP . '/' . $class . '.php';
+    require_once APP . '/' . $class . '.php';
 });

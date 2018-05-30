@@ -4,9 +4,9 @@ namespace App\Components;
 
 class Router
 {
+    const EN = 'en';
 
     private $routes;
-
 
     public function __construct()
     {
@@ -29,7 +29,7 @@ class Router
         }
     }
 
-    private function getInternalRoute($uri)
+    private function getInternalRoute(string $uri)
     {
         foreach ($this->routes as $key => $route) {
             if ($key === $uri) {
@@ -56,7 +56,6 @@ class Router
         $action = $route['Action'];
         $params = [];
         if (!is_callable(array($controller, $action))) {
-
             header('HTTP/1.1 404 Not Found');
 
             return false;

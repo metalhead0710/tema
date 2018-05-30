@@ -4,15 +4,17 @@ namespace App\Components;
 
 class Dict
 {
-
-    static function _($key)
+    /**
+     * Returns translated string
+     *
+     * @param string $key
+     *
+     * @return string
+     */
+    static function _(string $key): string
     {
         $dict = $GLOBALS['dict'];
 
-        if ($dict[$key]) {
-            return $dict[$key];
-        } else {
-            return $key;
-        }
+        return ($dict[$key]) ? $dict[$key] : $key;
     }
 }
