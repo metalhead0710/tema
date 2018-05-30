@@ -31,12 +31,14 @@ use App\Components\Url;
           <img src="/assets/img/logo.png" class="img-responsive" alt="" />
         </div>
         <div class="col-md-6 lang-switcher">
-          <a href="/" class="<?=($_SESSION['lang'] === 'ru') ? 'active' : ''?>">
-            <img src="/assets/img/ru.png" alt="Русский" />
-          </a>
-          <a href="/en/" class="<?=($_SESSION['lang'] === 'en') ? 'active' : ''?>">
-            <img src="/assets/img/en.png" alt="English" />
-          </a>
+          <div class="wrap">
+            <a href="/" class="<?=($_SESSION['lang'] === 'ru') ? 'active' : ''?>">
+              Рус
+            </a>
+            <a href="/en/" class="<?=($_SESSION['lang'] === 'en') ? 'active' : ''?>">
+              Eng
+            </a>
+          </div>
         </div>
         <div class="col-md-4 contacts">
           <p>

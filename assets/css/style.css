@@ -1,51 +1,4 @@
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(https://fonts.gstatic.com/s/opensans/v15/mem6YaGs126MiZpBA-UFUK0Zdcg.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 600;
-  src: local('Open Sans SemiBold Italic'), local('OpenSans-SemiBoldItalic'), url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKXGUdhrIqY.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Open Sans Bold Italic'), local('OpenSans-BoldItalic'), url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKWiUNhrIqY.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 800;
-  src: local('Open Sans ExtraBold Italic'), local('OpenSans-ExtraBoldItalic'), url(https://fonts.gstatic.com/s/opensans/v15/memnYaGs126MiZpBA-UFUKW-U9hrIqY.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v15/mem8YaGs126MiZpBA-UFVZ0e.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans SemiBold'), local('OpenSans-SemiBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UNirkOUuhs.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN7rgOUuhs.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 800;
-  src: local('Open Sans ExtraBold'), local('OpenSans-ExtraBold'), url(https://fonts.gstatic.com/s/opensans/v15/mem5YaGs126MiZpBA-UN8rsOUuhs.ttf) format('truetype');
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800,800i');
 /*Color Scheme*/
 body {
   font-family: 'Open Sans', sans-serif;
@@ -69,18 +22,22 @@ nav.navbar .lang-switcher {
   text-align: center;
   line-height: 110px;
 }
-nav.navbar .lang-switcher a {
-  display: inline-block;
+nav.navbar .lang-switcher .wrap a {
+  color: #333;
+  text-transform: uppercase;
 }
-nav.navbar .lang-switcher a:not(:last-child) {
-  margin-right: 20px;
+nav.navbar .lang-switcher .wrap a:first-child {
+  padding-right: 10px;
+  border-right: 1px solid #ccc;
 }
-nav.navbar .lang-switcher a img {
-  width: 50px;
-  filter: grayscale(60%);
+nav.navbar .lang-switcher .wrap a:last-child {
+  padding-left: 10px;
 }
-nav.navbar .lang-switcher a.active img {
-  filter: none;
+nav.navbar .lang-switcher .wrap a.active {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #fff;
+  background: #23527c;
 }
 nav.navbar .contacts p {
   font-size: 16px;
@@ -239,4 +196,3 @@ textarea.has-error {
     float: none !important;
   }
 }
-/*# sourceMappingURL=style.css.map */

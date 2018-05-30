@@ -30,19 +30,23 @@ nav.navbar {
   .lang-switcher {
     text-align: center;
     line-height: 110px;
-    a {
-      display: inline-block;
-      &:not(:last-child) {
-        margin-right: 20px;
+    .wrap {
+      a {
+        color: #333;
+        text-transform: uppercase;
+        &:first-child {
+          padding-right: 10px;
+          border-right: 1px solid #ccc;
+        }
+        &:last-child {
+          padding-left: 10px;
+        }
       }
-      img {
-        width: 50px;
-        filter: grayscale(60%);
-      }
-    }
-    a.active {
-      img {
-        filter: none;
+      a.active {
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #fff;
+        background: #23527c;
       }
     }
   }
