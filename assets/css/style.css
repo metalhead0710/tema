@@ -70,6 +70,8 @@ article {
 }
 .main-banner {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/img/truck.jpg);
+  background-size: cover;
+  background-position: center;
   padding: 155px 0;
 }
 .main-banner h1 {
