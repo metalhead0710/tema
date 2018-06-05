@@ -5,11 +5,19 @@ use App\Components\Url;
 <!DOCTYPE html>
 <html lang="<?=Url::getLang()?>">
 <head>
-  <title>WindroseFreight</title>
+  <title><?=L::_('pageTitle')?></title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
-  <meta name="description" content="<!--TODO: add support-->">
+  <meta name="description" content="<?=L::_('pageDescription')?>">
+
+  <meta property="og:locale" content="<?=L::_('locale')?>" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="<?=L::_('pageTitle')?>" />
+  <meta property="og:description" content="<?=L::_('pageDescription')?>" />
+  <meta property="og:url" content="<?=Url::getCurrentUrl()?>" />
+  <meta property="og:image" content="/assets/img/logo.png" />
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>

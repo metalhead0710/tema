@@ -19,4 +19,9 @@ class Url
 
         return ($arr[0] === self::EN) ? self::EN : self::RU;
     }
+
+    public static function getCurrentUrl()
+    {
+        return (isset($_SERVER['HTTPS']) ? "https" : "http") . "://{$_SERVER["HTTP_HOST"]}{$_SERVER["REQUEST_URI"]}";
+    }
 }
