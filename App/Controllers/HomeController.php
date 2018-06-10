@@ -21,7 +21,15 @@ class HomeController extends BaseController
         $content = $_POST['text'];
         if (!empty($name) && !empty($email) && !empty($phone)) {
             $adminEmail = 'for.spam.kolia@mail.ru';
-            $message = "Від <strong>{$name}</strong>.<br> Email: <strong>{$email}</strong>.<br> Телефон: <strong>{$phone}</strong>. <br>Текст: <p>{$content}.</p>";
+            $data = [
+                'name' => $name,
+                'email' => $email,
+                'phone' => $phone,
+                'content' => $content
+            ];
+            $this->view->vars(compact('data'));
+
+            $message = $this->view->renderEmail('email');
             $subject = 'Із сайту';
             $result = mail($adminEmail, $subject, $message, "Content-Type: text/html; charset=UTF-8");
             if ($result) {

@@ -11,7 +11,7 @@ class View
         $this->vars = $vars;
     }
 
-    public function render($name)
+    public function render(string $name)
     {
         $contentPage = APP . DS . 'App' . DS . 'Views' . DS . $name . '.php';
         if (file_exists($contentPage) == false) {
@@ -27,5 +27,14 @@ class View
         }
 
         include_once $contentPage;
+    }
+
+    public function renderEmail(string $name) : string
+    {
+        ob_start();
+        $this->render($name);
+        $message = ob_get_clean();
+
+        return $message;
     }
 }
