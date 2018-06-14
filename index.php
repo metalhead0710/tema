@@ -1,18 +1,30 @@
-<!doctype html>
-<title>Site Maintenance</title>
-<style>
-    body { text-align: center; padding: 150px; }
-    h1 { font-size: 50px; }
-    body { font: 20px Helvetica, sans-serif; color: #333; }
-    article { display: block; text-align: left; width: 650px; margin: 0 auto; }
-    a { color: #dc8100; text-decoration: none; }
-    a:hover { color: #333; text-decoration: none; }
-</style>
+<?php
 
-<article>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can always <a href="mailto:windrosefreight@gmail.com">contact us</a>, otherwise we&rsquo;ll be back online shortly!</p>
-        <p>&mdash; The Team</p>
-    </div>
-</article>
+INI_SET('DISPLAY_ERRORS', 1);
+
+ERROR_REPORTING(E_ALL);
+
+define('APP', dirname(__FILE__));
+define ('DS', DIRECTORY_SEPARATOR);
+
+require_once(APP . '/App/Components/Autoload.php');
+require_once(APP . '/App/Components/Dict.php');
+
+$lang = App\Components\Url::getLang();
+if($lang) {
+    $_SESSION['lang'] = trim(strip_tags($lang));
+    $date = time() + 30*24*60*60;
+    setcookie('lang',trim(strip_tags($lang)),$date);
+}
+else if (@$_COOKIE['lang']) {
+    $_SESSION['lang'] = $_COOKIE['lang'];
+}
+else {
+    $_SESSION['lang'] = 'ru';
+}
+$dict = parse_ini_file(APP . '/lang/' . $_SESSION['lang'].'.ini');
+
+
+$router = new App\Components\Router();
+
+$router->run();
