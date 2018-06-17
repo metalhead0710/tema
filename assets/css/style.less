@@ -285,6 +285,10 @@ a {
 footer {
   padding: 40px 0;
   background: #F2F3EB;
+
+  .socials {
+    text-align: right;
+  }
 }
 .footer {
   a {
@@ -308,6 +312,7 @@ footer {
   }
 }
 .social-list {
+  padding-left: 0;
   li {
     display: inline-block;
     transition: 0.2s linear;
@@ -408,6 +413,9 @@ footer {
     .pull-left, .pull-right {
       float: none !important;
     }
+    .socials {
+      text-align: center;
+    }
   }
 }
 
@@ -436,7 +444,10 @@ footer {
     margin-bottom: 15px;
   }
 }
-@media (min-width: 100px) and (max-width: 550px) {
+@media (max-width: 550px) {
+  .main-page {
+    margin-top: calc(50vh - 200px);
+  }
   .navbar-nav {
     >li {
       >a {

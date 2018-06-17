@@ -160,16 +160,20 @@ use App\Components\Url;
   <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
     <div class="container">
       <div class="row">
-        <h1>here is motherfucking block</h1>
+        <div class="col-md-12">
+          <h1>here is motherfucking block</h1>
+        </div>
       </div>
     </div>
   </section>
   <section id="about" class="section-padding wow fadeInUp">
     <div class="container">
       <div class="row">
-        <h3 class="text-center">
-          <?=L::_("about")?>
-        </h3>
+        <div class="col-md-12">
+          <h3 class="text-center">
+              <?=L::_("about")?>
+          </h3>
+        </div>
         </div>
       </div>
     </div>
@@ -219,7 +223,7 @@ use App\Components\Url;
             </div>
           </div>
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-md-6 socials">
           <ul class="social-list">
             <li>
               <a href="tel:+1267-603-8948">

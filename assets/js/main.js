@@ -48,17 +48,6 @@
         }
       });
 
-      // About section scroll
-      $(".overlay-detail a").on('click', function(e) {
-        e.preventDefault();
-        var hash = this.hash;
-        $('html, body').animate({
-          scrollTop: $(hash).offset().top
-        }, 900, function() {
-          window.location.hash = hash;
-        });
-      });
-
       //jQuery to collapse the navbar on scroll
       $(window).scroll(function() {
         if ($(".navbar-default").offset().top > 50) {

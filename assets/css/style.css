@@ -243,6 +243,9 @@ footer {
   padding: 40px 0;
   background: #F2F3EB;
 }
+footer .socials {
+  text-align: right;
+}
 .footer a {
   color: #BE2525;
 }
@@ -259,6 +262,9 @@ footer {
   margin-top: 0;
   margin-bottom: 1.625em;
   padding-right: 10px;
+}
+.social-list {
+  padding-left: 0;
 }
 .social-list li {
   transition: 0.2s linear;
@@ -344,6 +350,9 @@ footer {
   footer .pull-right {
     float: none !important;
   }
+  footer .socials {
+    text-align: center;
+  }
 }
 @media (max-width: 768px) {
   .navbar-collapse {
@@ -366,7 +375,10 @@ footer {
     margin-bottom: 15px;
   }
 }
-@media (min-width: 100px) and (max-width: 550px) {
+@media (max-width: 550px) {
+  .main-page {
+    margin-top: calc(50vh - 200px);
+  }
   .navbar-nav > li > a {
     padding-top: 15px;
     padding-bottom: 15px;
