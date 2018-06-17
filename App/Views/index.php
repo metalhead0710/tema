@@ -85,7 +85,7 @@ use App\Components\Url;
               <ul class="nav navbar-nav navbar-right navbar-border">
                 <li class="active"><a href="#topline"><?=L::_("Home")?></a></li>
                 <li><a href="#services" data-offset="68px"><?=L::_("Services")?></a></li>
-                <li><a href="#portfolio" data-offset="68px"><?=L::_("Advantages")?></a></li>
+                <li><a href="#advantages" data-offset="68px"><?=L::_("Advantages")?></a></li>
                 <li><a href="#about" data-offset="68px"><?=L::_("About Us")?></a></li>
                 <li><a href="#contact" data-offset="68px"><?=L::_("Contact Us")?></a></li>
               </ul>
@@ -120,7 +120,7 @@ use App\Components\Url;
       <div class="row hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5c">
         <div class="col-md-4">
           <i class="hi-icon fa fa fa-search"></i>
-          <div class="service-name">Поиск грузов</div>
+          <div class="service-name"><?=L::_('Cargo search')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="fa hi-icon fa fa-book"></i></div>
@@ -157,11 +157,46 @@ use App\Components\Url;
       </div>
     </div>
   </section>
-  <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
+  <section id="advantages" class="section-padding wow fadeInUp delay-05s">
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <h1>here is motherfucking block</h1>
+        <h2 class="text-center">
+            <?=L::_('Advantages')?>
+        </h2>
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item">
+              Решение брать груз или нет всегда остается за Вами
+            </li>
+            <li class="list-group-item">
+              Поиск грузов на большое количество трейлеров, в число которых входит - драйвены, риферы, флетбеды, степдеки и конестоги.
+            </li>
+            <li class="list-group-item">
+              Многие диспетчера, проработавшие по несколько лет, имеют хорошие отношения с брокерами, что позволяет брать хорошие грузы.
+            </li>
+            <li class="list-group-item">
+              За счет большого количества диспетчеров, часто мы первыми дозваниваемся на груз, который нас интересует.
+            </li>
+            <li class="list-group-item">
+              За каждой машиной закреплен индивидуальный диспетчер, за которым стоит команда диспетчеров в 3-4 человека, которая при необходимости, готова помочь.
+            </li>
+            <li class="list-group-item">
+              Экономия расходов на наемный персонал и все что с ним связано.
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="list-group">
+            <li class="list-group-item">
+              Наши диспетчеры ведут переговоры по самым высоким тарифам и информируют вас о ваших вариантах транспортировки. Вы принимаете окончательное решение.
+            </li>
+            <li class="list-group-item">
+              Вам никогда не придётся звонить по несколько раз или оставаться на линии длительное время, чтобы дозвониться своему диспетчеру.
+            </li>
+            <li class="list-group-item">
+              Оплата за наши услуги совершается в конце каждого месяца, либо дважды в месяц, в зависимости от того, какой вариант будет удобнее для Вас. Вам ничего не нужно оплачивать наперед, и мы не получаем никаких платежей от брокеров за Ваши грузы. Вы платите нам процент за грузы, которые мы для Вас нашли за предыдущий период. Поэтому Вы можете быть полностью уверены в том, что Вас не обманут.
+            </li>
+          </ul>
         </div>
       </div>
     </div>

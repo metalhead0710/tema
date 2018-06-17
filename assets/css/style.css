@@ -1,3 +1,9 @@
+/*
+ Color Scheme
+*/
+/*
+ Main Styles
+ */
 body {
   line-height: 1.4;
   font-family: 'Roboto', sans-serif;
@@ -158,13 +164,19 @@ a:active {
   line-height: 40px;
   border-radius: 50%;
 }
-.main-page .deco {
-  font-family: 'Satisfy', cursive;
+#advantages h2 {
+  margin-bottom: 30px;
 }
-#about {
-  background: url('../img/about-banner.jpg') center center no-repeat;
-  background-size: cover;
-  margin-bottom: -3px;
+#advantages li {
+  display: flex;
+  line-height: 35px;
+}
+#advantages li:before {
+  font-family: FontAwesome;
+  content: "\f00c";
+  font-size: 35px;
+  color: #2b542c;
+  margin-right: 15px;
 }
 .section-padding {
   padding: 60px 0;
@@ -202,11 +214,11 @@ a:active {
   margin-bottom: 30px;
 }
 #contact .has-error {
-  color: #f75960;
+  color: #BE2525;
 }
 #contact input.has-error,
 #contact textarea.has-error {
-  outline: 1px solid #f3313a;
+  outline: 1px solid #BE2525;
 }
 #contact .form {
   width: 65%;
@@ -278,58 +290,18 @@ footer .socials {
   font-size: 28px;
   margin-right: 15px;
 }
-.contact-sec h2 {
-  font-size: 28px;
-  color: #fff;
-  font-weight: 600;
-  padding: 15px 0;
-}
-.contact-sec p {
-  color: #fff;
-  font-size: 18px;
-  padding: 16px 0 24px;
-}
-.contact-sec i {
-  padding-right: 15px;
-}
-.contact-sec a {
-  color: #FFF;
-  background-color: rgba(174, 142, 142, 0.7);
-  display: inline-block;
-  padding: 16px 34px;
-  font-size: 18px;
-  transition: all 0.5s ease-in 0s;
-}
-.carousel-info {
-  float: left;
-}
-.type-underline {
-  color: #767676;
-}
-.type-underline:hover {
-  color: #767676;
-}
-.footer__lower {
-  margin-top: 3.25em;
-}
-.type--fine-print {
-  color: #767676;
-}
 .navbar-toggle {
   position: relative;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 4px;
 }
 .navbar-nav > li > a {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-.grid-item {
-  width: 200px;
-}
-.grid-item--width2 {
-  width: 400px;
-}
+/*
+ Responsive Style
+ */
 @media (max-width: 992px) {
   .topline .links {
     text-align: left;
@@ -370,11 +342,6 @@ footer .socials {
     min-height: 68px;
   }
 }
-@media (min-width: 551px) and (max-width: 980px) {
-  .title-text {
-    margin-bottom: 15px;
-  }
-}
 @media (max-width: 550px) {
   .main-page {
     margin-top: calc(50vh - 200px);
@@ -386,20 +353,10 @@ footer .socials {
   .navbar-brand {
     margin-top: 0;
   }
-  .carousel-info {
-    margin-bottom: 30px;
-  }
-  .type--fine-print {
-    text-align: center;
-  }
   .text-center-xs {
     text-align: center !important;
   }
   .social-list {
     margin-bottom: 15px;
   }
-  .title-text {
-    margin-bottom: 15px;
-  }
 }
-/*# sourceMappingURL=style.css.map */
