@@ -15,6 +15,6 @@ class Dict
     {
         $dict = $GLOBALS['dict'];
 
-        return ($dict[$key]) ? $dict[$key] : $key;
+        return $dict[$key] ?? $key;
     }
 }

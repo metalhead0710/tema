@@ -18,11 +18,14 @@ use App\Components\Url;
   <meta property="og:url" content="<?=Url::getCurrentUrl()?>" />
   <meta property="og:image" content="/assets/img/logo.png" />
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <!--Assets-->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
+  <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/hover-effects.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+
   <script type="text/javascript">
     window.App = {
       Settings: {
@@ -31,14 +34,12 @@ use App\Components\Url;
     };
   </script>
 </head>
-<body>
-<header>
-  <nav class="navbar navbar-default">
-      <div class="container">
-        <div class="col-md-2 logo">
-          <img src="/assets/img/logo.png" class="img-responsive" alt="" />
-        </div>
-        <div class="col-md-6 lang-switcher">
+<body data-spy="scroll" data-target=".topline" data-offset="60">
+
+  <div class="topline" id="topline">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2 lang-switcher">
           <div class="wrap">
             <a href="/" class="<?=($_SESSION['lang'] === 'ru') ? 'active' : ''?>">
               Рус
@@ -48,108 +49,132 @@ use App\Components\Url;
             </a>
           </div>
         </div>
-        <div class="col-md-4 contacts">
-          <p>
-            <a href="tel:+1267-603-8948">
-              <i class="fa fa-phone"></i>
-              +1267-603-8948
-            </a>
-          </p>
-          <p>
-            <a href="mailto:windrosefreight@gmail.com">
-              <i class="fa fa-envelope-o"></i>
-              windrosefreight@gmail.com
-            </a>
-          </p>
-          <p>
-            <i class="fa fa-clock-o"></i>
-            <span><?=L::_('wHours')?></span>
-          </p>
+        <div class="col-md-10 links">
+          <a href="tel:+1267-603-8948">
+            <i class="fa fa-phone"></i>
+            +1267-603-8948
+          </a>
+          <a href="callto:windrosefreight">
+            <i class="fa fa-skype"></i>
+            windrosefreight
+          </a>
+          <a href="mailto:windrosefreight@gmail.com">
+            <i class="fa fa-envelope-o"></i>
+            windrosefreight@gmail.com
+          </a>
         </div>
       </div>
-  </nav>
-</header>
-<main>
-  <article class="main-banner">
-    <div class="container">
-      <h1 class="text-center">
-        <?=L::_('mainHeader')?>
-      </h1>
     </div>
-  </article>
-  <article class="trucks">
+  </div>
+  <div class="header">
+    <div class="bg-color">
+      <header id="main-header">
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="<?=Url::getCurrentUrl()?>">
+                <img src="/assets/img/logo.png" class="img-responsive" alt="WindroseFreight" />
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="mainMenu">
+              <ul class="nav navbar-nav navbar-right navbar-border">
+                <li class="active"><a href="#topline"><?=L::_("Home")?></a></li>
+                <li><a href="#services" data-offset="68px"><?=L::_("Services")?></a></li>
+                <li><a href="#portfolio" data-offset="68px"><?=L::_("Advantages")?></a></li>
+                <li><a href="#about" data-offset="68px"><?=L::_("About Us")?></a></li>
+                <li><a href="#contact" data-offset="68px"><?=L::_("Contact Us")?></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 main-page wow fadeIn delay-05s">
+              <div class="logo">
+                <img src="/assets/img/logo.png" class="img-responsive" alt="" />
+              </div>
+              <div class="banner-text">
+                <h2><?=L::_('mainHeader')?></h2>
+              </div>
+              <div class="overlay-detail text-center">
+                <a href="#services"><i class="fa fa-angle-down"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <section id="services" class="section-padding wow fadeInUp delay-05s" data-offset="68">
     <div class="container">
-      <h2 class="box-heading text-center">
-        <?=L::_('trucksServe')?>
+      <h2 class="text-center">
+          <?=L::_('Services')?>
       </h2>
-      <div class="row">
-        <div class="col-md-3 truck box-with-pic">
-          <div class="image">
-            <img src="/assets/img/Flatbed.png" alt="" class="img-responsive">
-          </div>
-          <p class="text-center">Flatbed</p>
+      <div class="row hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5c">
+        <div class="col-md-4">
+          <i class="hi-icon fa fa fa-search"></i>
+          <div class="service-name">Поиск грузов</div>
         </div>
-        <div class="col-md-3 truck box-with-pic">
-          <div class="image">
-            <img src="/assets/img/Stepdeck.png" alt="" class="img-responsive">
-          </div>
-          <p class="text-center">Step Deck</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="fa hi-icon fa fa-book"></i></div>
+          <div class="service-name">Заполнение сетапов</div>
         </div>
-        <div class="col-md-3 truck box-with-pic">
-          <div class="image">
-            <img src="/assets/img/DryVan.png" alt="" class="img-responsive">
-          </div>
-          <p class="text-center ">Dry Van</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="hi-icon fa fa-line-chart"></i></div>
+          <div class="service-name">Торги с брокерами</div>
         </div>
-        <div class="col-md-3 truck box-with-pic">
-          <div class="image">
-            <img src="/assets/img/reefer-truck.png" alt="" class="img-responsive">
-          </div>
-          <p class="text-center">Reefer</p>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="hi-icon fa fa-check-square-o"></i></div>
+          <div class="service-name">Проверка брокеров</div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="hi-icon fa fa-file-text-o"></i></div>
+          <div class="service-name">Поиск паршалов</div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="hi-icon fa fa-ambulance"></i></div>
+          <div class="service-name">Помощь водителям в дороге</div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="hi-icon fa fa-money"></i></div>
+          <div class="service-name">Взыскание ТОНУ и простоя</div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="hi-icon fa fa-briefcase"></i></div>
+          <div class="service-name">Заказ сертификатов страхования</div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="icon"><i class="hi-icon fa fa-plus"></i></div>
+          <div class="service-name">И многое другое</div>
         </div>
       </div>
     </div>
-  </article>
-  <article class="services">
+  </section>
+  <section id="portfolio" class="section-padding wow fadeInUp delay-05s">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 box-with-pic">
-          <div class="img">
-            <img src="/assets/img/garanty.png" alt="">
-          </div>
-          <h4 class="text-center">
-              <?=L::_('guarantee')?>
-          </h4>
-          <p class="text">
-              <?=L::_('guaranteeText')?>
-          </p>
-        </div>
-        <div class="col-md-4 box-with-pic">
-          <div class="img">
-            <img src="/assets/img/menedzher.png" alt="">
-          </div>
-          <h4 class="text-center">
-              <?=L::_('personalApproach')?>
-          </h4>
-          <p class="text">
-              <?=L::_('personalApproachText')?>
-          </p>
-        </div>
-        <div class="col-md-4 box-with-pic">
-          <div class="img">
-            <img src="/assets/img/Service.png" alt="">
-          </div>
-          <h4 class="text-center">
-              <?=L::_('service')?>
-          </h4>
-          <p class="text">
-              <?=L::_('serviceText')?>
-          </p>
+        <h1>here is motherfucking block</h1>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="section-padding wow fadeInUp">
+    <div class="container">
+      <div class="row">
+        <h3 class="text-center">
+          <?=L::_("about")?>
+        </h3>
         </div>
       </div>
     </div>
-  </article>
-  <article class="feedback">
+  </section>
+  <section id="contact" class="section-padding wow fadeIn delay-05s">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -181,35 +206,48 @@ use App\Components\Url;
         </div>
       </div>
     </div>
-  </article>
-  <article class="about">
+  </section>
+  <footer class="footer-2 text-center-xs bg--white">
     <div class="container">
-      <h3>
-          <?=L::_('about')?>
-      </h3>
-    </div>    
-  </article>  
-</main>
-<footer>
-  <div class="container">
-    <div class="pull-left">
-      <p>WindroseFreight</p>
-      <p>2016-<?=date('Y')?></p>
+      <!--end row-->
+      <div class="row">
+        <div class="col-md-6">
+          <div class="footer">
+            © Copyright Windrose Freight. All Rights Reserved
+            <div class="credits">
+              <?=date("Y")?>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 text-right">
+          <ul class="social-list">
+            <li>
+              <a href="tel:+1267-603-8948">
+                <i class="fa fa-phone"></i>
+              </a>
+            </li>
+            <li>
+              <a href="callto:windrosefreight">
+                <i class="fa fa-skype"></i>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:windrosefreight@gmail.com">
+                <i class="fa fa-envelope-o"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--end row-->
     </div>
-    <div class="pull-right">
-      <a href="tel:+1267-603-8948">
-        <i class="fa fa-phone"></i>
-        +1267-603-8948
-      </a>
-      <br />
-      <a href="mailto:windrosefreight@gmail.com">
-        <i class="fa fa-envelope-o"></i>
-        windrosefreight@gmail.com
-      </a>
-    </div>
-  </div>
-</footer>
+  </footer>
 <div class="results"></div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.easing.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/wow.js"></script>
+<script src="/assets/js/modernizr.custom.js"></script>
 <script type="text/javascript" src="/assets/js/common.js"></script>
 <script type="text/javascript" src="/assets/js/validate.js"></script>
 <script type="text/javascript" src="/assets/js/main.js"></script>
