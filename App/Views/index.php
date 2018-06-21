@@ -54,7 +54,7 @@ use App\Components\Url;
             <i class="fa fa-phone"></i>
             +1267-603-8948
           </a>
-          <a href="callto:live:tvnewtrade">
+          <a href="skype:live:tvnewtrade?chat">
             <i class="fa fa-skype"></i>
             Windrose Freight
           </a>
