@@ -54,9 +54,9 @@ use App\Components\Url;
             <i class="fa fa-phone"></i>
             +1267-603-8948
           </a>
-          <a href="callto:windrosefreight">
+          <a href="callto:live:tvnewtrade">
             <i class="fa fa-skype"></i>
-            windrosefreight
+            Windrose Freight
           </a>
           <a href="mailto:windrosefreight@gmail.com">
             <i class="fa fa-envelope-o"></i>
