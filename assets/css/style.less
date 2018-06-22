@@ -2,7 +2,8 @@
  Color Scheme
 */
 @white: #fff;
-@pseudo_white: #fffde0;
+@yellow: #ffa121;
+@yellow-dark: #ba721a;
 @color_6: green;
 @red: #BE2525;
 @grey: #767676;
@@ -55,10 +56,11 @@ a {
 
   a {
     color: #cccccc;
-    &:hover,
+
     &:active,
-    &focus {
-      color: #ffa121;
+    &:hover,
+    &:focus {
+      color: @yellow;
     }
   }
 
@@ -74,7 +76,7 @@ a {
       }
     }
     a.active {
-      color: #ffa121;
+      color: @yellow;
     }
   }
 
@@ -90,7 +92,6 @@ a {
       margin-left: 0;
     }
   }
-
 }
 
 .header {
@@ -121,26 +122,28 @@ a {
         font-weight: 400;
         color: @white;
         outline: none;
-        &:focus {
-          color: @pseudo_white;
+        background-color: @background_transparent;
+
+        &:hover {
+          color: @yellow-dark;
           background-color: @background_transparent;
         }
-        &:hover {
-          color: @pseudo_white;
-          background-color: @background_transparent;
+
+        &:focus,
+        &:active {
+          color: @white;
         }
       }
     }
     > .active {
       > a {
-        color: @pseudo_white;
+        color: @yellow;
         background-color: @background_transparent;
+
+        &:active,
+        &:hover,
         &:focus {
-          color: @pseudo_white;
-          background-color: @background_transparent;
-        }
-        &:hover {
-          color: @pseudo_white;
+          color: @yellow;
           background-color: @background_transparent;
         }
       }
@@ -173,6 +176,7 @@ a {
   margin-top: calc(50vh - 350px);
   img {
     margin: 0 auto;
+    max-width: 500px;
   }
 
   .banner-text {
@@ -236,6 +240,7 @@ a {
   }
   .service-name {
     font-size: 2rem;
+    min-height: 70px;
   }
 }
 
@@ -244,7 +249,6 @@ a {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding: 200px 0;
 
   h3 {
     font-size: 4rem;

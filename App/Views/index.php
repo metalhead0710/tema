@@ -10,13 +10,14 @@ use App\Components\Url;
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="content-type" content="text/html;charset=UTF-8">
   <meta name="description" content="<?=L::_('pageDescription')?>">
+  <meta name="keywords" content="<?=L::_('pageKeywords')?>">
 
   <meta property="og:locale" content="<?=L::_('locale')?>" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<?=L::_('pageTitle')?>" />
   <meta property="og:description" content="<?=L::_('pageDescription')?>" />
   <meta property="og:url" content="<?=Url::getCurrentUrl()?>" />
-  <meta property="og:image" content="/assets/img/logo.png" />
+  <meta property="og:image" content="/assets/img/windrose.png" />
 
   <!--Assets-->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
@@ -34,8 +35,7 @@ use App\Components\Url;
     };
   </script>
 </head>
-<body data-spy="scroll" data-target=".topline" data-offset="60">
-
+<body data-spy="scroll" data-target=".navbar" data-offset="68">
   <div class="topline" id="topline">
     <div class="container">
       <div class="row">
@@ -98,7 +98,7 @@ use App\Components\Url;
           <div class="row">
             <div class="col-md-12 main-page wow fadeIn delay-05s">
               <div class="logo">
-                <img src="/assets/img/logo.png" class="img-responsive" alt="" />
+                <img src="/assets/img/logo.png" class="img-responsive hidden-xs" alt="" />
               </div>
               <div class="banner-text">
                 <h2><?=L::_('mainHeader')?></h2>
@@ -118,41 +118,41 @@ use App\Components\Url;
           <?=L::_('Services')?>
       </h2>
       <div class="row hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5c">
-        <div class="col-md-4">
+        <div class="col-md-4 col-sm-6">
           <i class="hi-icon fa fa fa-search"></i>
-          <div class="service-name"><?=L::_('Cargo search')?></div>
+          <div class="service-name"><?=L::_('serv1')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="fa hi-icon fa fa-book"></i></div>
-          <div class="service-name">Заполнение сетапов</div>
+          <div class="service-name"><?=L::_('serv2')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="hi-icon fa fa-line-chart"></i></div>
-          <div class="service-name">Торги с брокерами</div>
+          <div class="service-name"><?=L::_('serv3')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="hi-icon fa fa-check-square-o"></i></div>
-          <div class="service-name">Проверка брокеров</div>
+          <div class="service-name"><?=L::_('serv4')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="hi-icon fa fa-file-text-o"></i></div>
-          <div class="service-name">Поиск паршалов</div>
+          <div class="service-name"><?=L::_('serv5')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="hi-icon fa fa-ambulance"></i></div>
-          <div class="service-name">Помощь водителям в дороге</div>
+          <div class="service-name"><?=L::_('serv6')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="hi-icon fa fa-money"></i></div>
-          <div class="service-name">Взыскание ТОНУ и простоя</div>
+          <div class="service-name"><?=L::_('serv7')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="hi-icon fa fa-briefcase"></i></div>
-          <div class="service-name">Заказ сертификатов страхования</div>
+          <div class="service-name"><?=L::_('serv8')?></div>
         </div>
         <div class="col-md-4 col-sm-6">
           <div class="icon"><i class="hi-icon fa fa-plus"></i></div>
-          <div class="service-name">И многое другое</div>
+          <div class="service-name"><?=L::_('serv9')?></div>
         </div>
       </div>
     </div>
@@ -166,42 +166,48 @@ use App\Components\Url;
         <div class="col-md-6">
           <ul class="list-group">
             <li class="list-group-item">
-              Решение брать груз или нет всегда остается за Вами
+                <?=L::_('adv1')?>
             </li>
             <li class="list-group-item">
-              Поиск грузов на большое количество трейлеров, в число которых входит - драйвены, риферы, флетбеды, степдеки и конестоги.
+                <?=L::_('adv2')?>
             </li>
             <li class="list-group-item">
-              Многие диспетчера, проработавшие по несколько лет, имеют хорошие отношения с брокерами, что позволяет брать хорошие грузы.
+                <?=L::_('adv3')?>
             </li>
             <li class="list-group-item">
-              За счет большого количества диспетчеров, часто мы первыми дозваниваемся на груз, который нас интересует.
+                <?=L::_('adv4')?>
             </li>
             <li class="list-group-item">
-              За каждой машиной закреплен индивидуальный диспетчер, за которым стоит команда диспетчеров в 3-4 человека, которая при необходимости, готова помочь.
+                <?=L::_('adv5')?>
             </li>
             <li class="list-group-item">
-              Экономия расходов на наемный персонал и все что с ним связано.
+                <?=L::_('adv6')?>
+            </li>
+            <li class="list-group-item">
+                <?=L::_('adv7')?>
             </li>
           </ul>
         </div>
         <div class="col-md-6">
           <ul class="list-group">
             <li class="list-group-item">
-              Наши диспетчеры ведут переговоры по самым высоким тарифам и информируют вас о ваших вариантах транспортировки. Вы принимаете окончательное решение.
+                <?=L::_('adv8')?>
             </li>
             <li class="list-group-item">
-              Вам никогда не придётся звонить по несколько раз или оставаться на линии длительное время, чтобы дозвониться своему диспетчеру.
+                <?=L::_('adv9')?>
             </li>
             <li class="list-group-item">
-              Оплата за наши услуги совершается в конце каждого месяца, либо дважды в месяц, в зависимости от того, какой вариант будет удобнее для Вас. Вам ничего не нужно оплачивать наперед, и мы не получаем никаких платежей от брокеров за Ваши грузы. Вы платите нам процент за грузы, которые мы для Вас нашли за предыдущий период. Поэтому Вы можете быть полностью уверены в том, что Вас не обманут.
+                <?=L::_('adv10')?>
+            </li>
+            <li class="list-group-item">
+                <?=L::_('adv11')?>
             </li>
           </ul>
         </div>
       </div>
     </div>
   </section>
-  <section id="about" class="section-padding wow fadeInUp">
+  <section id="about" class="section-padding wow fadeInUp delay-05s">
     <div class="container">
       <div class="row">
         <div class="col-md-12">

@@ -40,9 +40,9 @@ a:active {
 .topline a {
   color: #cccccc;
 }
-.topline a:hover,
 .topline a:active,
-.topline afocus {
+.topline a:hover,
+.topline a:focus {
   color: #ffa121;
 }
 .topline .lang-switcher {
@@ -95,25 +95,24 @@ a:active {
   font-weight: 400;
   color: #fff;
   outline: none;
-}
-.navbar-default .navbar-nav > li > a:focus {
-  color: #fffde0;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > li > a:hover {
-  color: #fffde0;
+  color: #ba721a;
   background-color: transparent;
+}
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > li > a:active {
+  color: #fff;
 }
 .navbar-default .navbar-nav > .active > a {
-  color: #fffde0;
+  color: #ffa121;
   background-color: transparent;
 }
+.navbar-default .navbar-nav > .active > a:active,
+.navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #fffde0;
-  background-color: transparent;
-}
-.navbar-default .navbar-nav > .active > a:hover {
-  color: #fffde0;
+  color: #ffa121;
   background-color: transparent;
 }
 .navbar-brand {
@@ -138,6 +137,7 @@ a:active {
 }
 .main-page img {
   margin: 0 auto;
+  max-width: 500px;
 }
 .main-page .banner-text {
   border-left: 5px solid #BE2525;
@@ -192,13 +192,13 @@ a:active {
 }
 #services .service-name {
   font-size: 2rem;
+  min-height: 70px;
 }
 #about {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(/assets/img/trux.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  padding: 200px 0;
 }
 #about h3 {
   font-size: 4rem;

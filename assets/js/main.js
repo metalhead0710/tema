@@ -17,7 +17,7 @@
       this.sendEmail = $('.send-email');
       this.wow = new WOW({
         animateClass: 'animated',
-        offset: 100
+        offset: 0
       });
 
       // Bind handlers
@@ -35,8 +35,8 @@
 
       // Navigation scrolls
       $('.navbar-nav li a, .overlay-detail a').bind('click', function(e) {
-        $('.navbar-nav li').removeClass('active');
-        $(this).closest('li').addClass('active');
+        /*$('.navbar-nav li').removeClass('active');
+        $(this).closest('li').addClass('active');*/
         var $anchor = $(this);
         var nav = $($anchor.attr('href'));
         if (nav.length) {
