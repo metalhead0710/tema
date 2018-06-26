@@ -21,7 +21,7 @@ use App\Components\Url;
 
   <!--Assets-->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
-  <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/animate.css">
   <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/hover-effects.css">
