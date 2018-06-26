@@ -79,7 +79,7 @@
         data: msg,
         success: function(data) {
           $('.results').html(data);
-          self.setTimeout();
+          setTimeout(self.removeNotification, 4000);
           self.contactForm[0].reset();
         },
         error:  function(xhr, str){
@@ -87,8 +87,8 @@
         }
       });
     },
-    setTimeout: function(){
-      $('.alert').fadeOut(8000)
+    removeNotification: function(){
+      $('.alert').fadeOut(2000);
     }
   };
 
