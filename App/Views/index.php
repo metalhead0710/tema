@@ -260,7 +260,7 @@ use App\Components\Url;
           <div class="footer">
             © Copyright Windrose Freight. All Rights Reserved
             <div class="credits">
-              <?=date("Y")?>
+              2016
             </div>
           </div>
         </div>
