@@ -19,7 +19,6 @@
         animateClass: 'animated',
         offset: 0
       });
-
       // Bind handlers
       this.bindHandlers();
     },
@@ -35,8 +34,6 @@
 
       // Navigation scrolls
       $('.navbar-nav li a, .overlay-detail a').bind('click', function(e) {
-        /*$('.navbar-nav li').removeClass('active');
-        $(this).closest('li').addClass('active');*/
         var $anchor = $(this);
         var nav = $($anchor.attr('href'));
         if (nav.length) {
@@ -56,7 +53,6 @@
           $(".navbar-fixed-top").removeClass("top-nav-collapse");
         }
       });
-
 
       this.sendEmail.on('click', function() {
         self.contactForm.validate({
