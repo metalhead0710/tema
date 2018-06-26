@@ -20,7 +20,7 @@ class HomeController extends BaseController
         $phone = $_POST['phone'];
         $content = $_POST['text'];
         if (!empty($name) && !empty($email) && !empty($phone)) {
-            $adminEmail = 'for.spam.kolia@mail.ru';
+            $adminEmail = 'windrosefreight@gmail.com';
             $data = [
                 'name' => $name,
                 'email' => $email,

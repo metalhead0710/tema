@@ -22,10 +22,10 @@ use App\Components\Url;
   <!--Assets-->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fira+Sans|Roboto:300,400|Questrial|Satisfy">
   <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/animate.css">
-  <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/hover-effects.css">
-  <link rel="stylesheet" type="text/css" href="http://w5i4n9j2.inxycdn.host/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/animate.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/hover-effects.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
   <script type="text/javascript">
     window.App = {
@@ -78,7 +78,7 @@ use App\Components\Url;
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="<?=Url::getCurrentUrl()?>">
-                <img src="http://w5i4n9j2.inxycdn.host/assets/img/logo.png" class="img-responsive" alt="WindroseFreight" />
+                <img src="/assets/img/logo.png" class="img-responsive" alt="WindroseFreight" />
               </a>
             </div>
             <div class="collapse navbar-collapse" id="mainMenu">
@@ -98,7 +98,7 @@ use App\Components\Url;
           <div class="row">
             <div class="col-md-12 main-page wow fadeIn delay-05s">
               <div class="logo">
-                <img src="http://w5i4n9j2.inxycdn.host/assets/img/logo.png" class="img-responsive hidden-xs" alt="" />
+                <img src="/assets/img/logo.png" class="img-responsive hidden-xs" alt="" />
               </div>
               <div class="banner-text">
                 <h2><?=L::_('mainHeader')?></h2>
@@ -288,14 +288,14 @@ use App\Components\Url;
     </div>
   </footer>
 <div class="results"></div>
-<script src="http://w5i4n9j2.inxycdn.host/assets/js/jquery.min.js"></script>
-<script src="http://w5i4n9j2.inxycdn.host/assets/js/jquery.easing.min.js"></script>
-<script src="http://w5i4n9j2.inxycdn.host/assets/js/bootstrap.min.js"></script>
-<script src="http://w5i4n9j2.inxycdn.host/assets/js/wow.js"></script>
-<script src="http://w5i4n9j2.inxycdn.host/assets/js/modernizr.custom.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/jquery.easing.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/wow.js"></script>
+<script src="/assets/js/modernizr.custom.js"></script>
 <script type="text/javascript" src="http://w5i4n9j2.inxycdn.host/assets/js/common.js"></script>
 <script type="text/javascript" src="http://w5i4n9j2.inxycdn.host/assets/js/validate.js"></script>
-<script type="text/javascript" src="http://w5i4n9j2.inxycdn.host/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
 <script type="text/javascript">
   App.Page.Main({
     url: 'email-us',
