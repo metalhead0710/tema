@@ -4,9 +4,12 @@
 @white: #fff;
 @yellow: #ffa121;
 @yellow-dark: #ba721a;
-@color_6: green;
+@green: green;
+@dark-green: #2b542c;
 @red: #BE2525;
 @grey: #767676;
+@light-grey: #cccccc;
+@lighter-grey: #f5f5f5;
 @Roboto: 'Roboto', sans-serif;
 @Satisfy: 'Satisfy', cursive;
 @Questrial: 'Questrial', sans-serif;
@@ -51,7 +54,7 @@ a {
   padding: 15px 0;
 
   a {
-    color: #cccccc;
+    color: @light-grey;
 
     &:active,
     &:hover,
@@ -64,7 +67,7 @@ a {
     text-transform: uppercase;
     a {
       &:first-child {
-        border-right: 1px solid #f5f5f5;
+        border-right: 1px solid @lighter-grey;
         margin-right: 3px;
       }
       &:last-child {
@@ -176,7 +179,7 @@ a {
   }
 
   .banner-text {
-    border-left: 5px solid #BE2525;
+    border-left: 5px solid @red;
     padding: 15px 40px;
     color: @white;
     h2 {
@@ -197,7 +200,7 @@ a {
         color: @white;
         width: 40px;
         height: 40px;
-        border: 1px solid #fff;
+        border: 1px solid @white;
         line-height: 40px;
         border-radius: 50%;
       }
@@ -216,7 +219,7 @@ a {
       font-family: FontAwesome;
       content: "\f00c";
       font-size: 35px;
-      color: #2b542c;
+      color: @dark-green;
       margin-right: 15px;
     }
   }
@@ -248,14 +251,14 @@ a {
 
   h3 {
     font-size: 4rem;
-    color: #fff;
+    color: @white;
     text-align: justify;
     line-height: 1.5;
   }
 }
 
 #contact {
-  background-color: #eee;
+  background-color: @lighter-grey;
   p {
     font-size: 20px;
     margin-bottom: 30px;
