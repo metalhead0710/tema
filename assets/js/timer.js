@@ -42,8 +42,8 @@
           seconds = '0' + seconds;
         }
         var color = '#' + hours + minutes + seconds;
-        document.getElementById('timer').innerHTML = days + 'днів ' + hours +
-            ':' + minutes + ':' + seconds;
+        document.getElementById('timer').innerHTML = days + ' днів ' + hours +
+            'г ' + minutes + 'хв ' + seconds +"сек ";
         document.body.style.background = color;
       }, 1000);
     }

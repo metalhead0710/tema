@@ -15,6 +15,7 @@ class GreetController extends BaseController
 
         if ($now < $target_date) {
             $this->view->vars(['target_date' => $target_date]);
+
             return $this->view->render('timer');
         } else if ((int)$now->format('m') === (int)$target_date->format('m') && (int)$now->format('d') === (int)$target_date->format('d')) {
             echo "greeting calls";
