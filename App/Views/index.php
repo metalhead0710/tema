@@ -50,9 +50,9 @@ use App\Components\Url;
           </div>
         </div>
         <div class="col-md-10 links">
-          <a href="tel:+1267-603-8948">
+          <a href="tel:++13123129613">
             <i class="fa fa-phone"></i>
-            +1267-603-8948
+            +13123129613
           </a>
           <a href="skype:live:tvnewtrade?chat">
             <i class="fa fa-skype"></i>
@@ -260,19 +260,19 @@ use App\Components\Url;
           <div class="footer">
             © Copyright Windrose Freight. All Rights Reserved
             <div class="credits">
-              2016
+              2016-2018
             </div>
           </div>
         </div>
         <div class="col-md-6 socials">
           <ul class="social-list">
             <li>
-              <a href="tel:+1267-603-8948">
+              <a href="tel:+13123129613">
                 <i class="fa fa-phone"></i>
               </a>
             </li>
             <li>
-              <a href="callto:windrosefreight">
+              <a href="skype:live:tvnewtrade?chat">
                 <i class="fa fa-skype"></i>
               </a>
             </li>
