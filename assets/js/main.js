@@ -72,7 +72,7 @@
     },
     send: function() {
       var self = this,
-          msg   = this.contactForm.serialize();
+          msg   = self.contactForm.serialize();
       $.ajax({
         type: 'POST',
         url: this.options.url,
