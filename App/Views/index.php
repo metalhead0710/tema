@@ -295,7 +295,7 @@ use App\Components\Url;
 <script src="http://w5i4n9j2.inxycdn.host/assets/js/modernizr.custom.js"></script>
 <script type="text/javascript" src="http://w5i4n9j2.inxycdn.host/assets/js/common.js"></script>
 <script type="text/javascript" src="http://w5i4n9j2.inxycdn.host/assets/js/validate.js"></script>
-<script type="text/javascript" src="http://w5i4n9j2.inxycdn.host/assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
 <script type="text/javascript">
   App.Page.Main({
     url: 'email-us',
