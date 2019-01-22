@@ -16,16 +16,20 @@ class HomeController extends BaseController
     public function emailUs()
     {
         $name = $_POST['name'];
+        $surname = $_POST['surname'];
         $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $content = $_POST['text'];
-        if (!empty($name) && !empty($email) && !empty($phone)) {
-            $adminEmail = 'windrosefreight@gmail.com';
+        $company = $_POST['company'];
+        $tel = $_POST['tel'];
+        $message = $_POST['message'];
+        if (!empty($name) && !empty($email) && !empty($tel)) {
+            $adminEmail = 'tst@test.com';
             $data = [
                 'name' => $name,
+                'surname' => $surname,
+                'company' => $company,
                 'email' => $email,
-                'phone' => $phone,
-                'content' => $content
+                'tel' => $tel,
+                'message' => $message
             ];
             $this->view->vars(compact('data'));
 
@@ -33,16 +37,16 @@ class HomeController extends BaseController
             $subject = 'Із сайту';
             $result = mail($adminEmail, $subject, $message, "Content-Type: text/html; charset=UTF-8");
             if ($result) {
-                echo "<div class='alert alert-success modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageSuccess') . "</div>";
+                echo "<div class='alert alert-success alert-dismissible fade show'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>Message sent sucessfully</div>";
 
                 return true;
             } else {
-                echo "<div class='alert alert-danger modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageError') . "</div>";
+                echo "<div class='alert alert-danger alert-dismissible fade show'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>Fuack! Cannot send sranishe message</div>";
 
                 return false;
             }
         } else {
-            echo "<div class='alert alert-danger modal' style='width: 380px;margin: 0 auto; display:block;bottom:initial; overflow-y:hidden; top:25%;'><button class='close' data-dismiss='alert'><i class='fa fa-times'></i></button>" . Dict::_('messageNotValid') . "</div>";
+            echo "<div class='alert alert-danger alert-dismissible fade show'><button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>Fuack! Cannot send sranishe message</div>";
         }
     }
 }

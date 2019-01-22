@@ -1,5 +1,5 @@
-php_flag display_errors off
+php_flag display_errors on
 RewriteEngine on
 RewriteBase /
-RewriteRule ^assets/(.*)$ assets/$1 [L]
+RewriteRule ^dist/(.*)$ dist/$1 [L]
 RewriteRule ^(.*)$ index.php
