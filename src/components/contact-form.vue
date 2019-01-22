@@ -151,7 +151,7 @@ export default {
           let msg   = $('form').serialize();
           $.ajax({
             type: 'POST',
-            url: 'email-us',
+            url: '/api/email-us',
             data: msg,
             success: (data) => {
               $('.results').html(data);

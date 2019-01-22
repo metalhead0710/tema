@@ -1,5 +1,7 @@
-php_flag display_errors on
-RewriteEngine on
-RewriteBase /
-RewriteRule ^dist/(.*)$ dist/$1 [L]
-RewriteRule ^(.*)$ index.php
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+    RewriteCond %{HTTPS} !on
+    RewriteRule ^api/(.*)$ api/$1 [L,R=301]
+	RewriteRule ^$ dist/ [L]
+    RewriteRule ((?s).*) dist/$1 [L]
+</IfModule>

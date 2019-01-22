@@ -1,5 +1,0 @@
-<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>platops</title><meta name=description content="PlatOps provides Cloud managed services, IT consulations, dedicated support, monitoring and security managed services for all types of businesses."><meta name=keywords content="Cloud services, Secured cloud service, DevOps Assessment, DevOps Management, DevOps Automation, Application Services"><link href=/dist/static/css/app.c1014e3b3ec5e5ae5e861aea2fdd6d63.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/dist/static/js/manifest.f50870fb1aae05fa4e14.js></script><script type=text/javascript src=/dist/static/js/vendor.bc974d5e0039015ea824.js></script><script type=text/javascript src=/dist/static/js/app.6870f79b149c054629ca.js></script></body><script async src="https://www.googletagmanager.com/gtag/js?id=UA-132360167-1"></script><script>window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-132360167-1');</script></html>

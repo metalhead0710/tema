@@ -40,17 +40,7 @@ class Router
 
     public function run()
     {
-        if (Url::getLang() === 'en') {
-            $uriStr = $this->getURI();
-            if (strlen($uriStr) > 2) {
-                $uri = substr($uriStr, 3);
-            } else {
-                $uri = substr($uriStr, 2);
-            }
-
-        } else {
-            $uri = $this->getURI();
-        }
+        $uri = $this->getURI();
         $route = $this->getInternalRoute($uri);
         $controller = '\\App\Controllers\\' . $route['Controller'];
         $action = $route['Action'];

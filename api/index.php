@@ -8,7 +8,7 @@ define('APP', dirname(__FILE__));
 define ('DS', DIRECTORY_SEPARATOR);
 
 require_once(APP . '/App/Components/Autoload.php');
-require_once(APP . '/App/Components/Dict.php');
+/*require_once(APP . '/App/Components/Dict.php');
 
 $lang = App\Components\Url::getLang();
 if($lang) {
@@ -23,7 +23,7 @@ else {
     $_SESSION['lang'] = 'ru';
 }
 $dict = parse_ini_file(APP . '/lang/' . $_SESSION['lang'].'.ini');
-
+*/
 
 $router = new App\Components\Router();
 
