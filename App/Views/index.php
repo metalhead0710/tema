@@ -34,6 +34,32 @@ use App\Components\Url;
       }
     };
   </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133452101-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133452101-1');
+  </script>
+  
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1869702299818725');
+      fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1869702299818725&ev=PageView&noscript=1"/></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="68">
   <div class="topline" id="topline">
@@ -260,7 +286,7 @@ use App\Components\Url;
           <div class="footer">
             © Copyright Windrose Freight. All Rights Reserved
             <div class="credits">
-              2016-2018
+              2016-<?=date('Y')?>
             </div>
           </div>
         </div>
