@@ -325,6 +325,7 @@ use App\Components\Url;
 <script type="text/javascript">
   App.Page.Main({
     url: 'email-us',
+    redirectUrl: '<?=(Url::getLang() === 'en') ? '/en/thank-you' : '/thank-you'?>',
     required: "<?=L::_('requiredField')?>",
     notValidEmail: "<?=L::_('notValidEmail')?>"
   });

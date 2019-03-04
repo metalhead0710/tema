@@ -5,6 +5,7 @@
 
     options: {
       url: null,
+      redirectUrl: null,
       required: null,
       notValidEmail: null
     },
@@ -78,17 +79,30 @@
         url: this.options.url,
         data: msg,
         success: function(data) {
-          $('.results').html(data);
-          setTimeout(self.removeNotification, 4000);
-          self.contactForm[0].reset();
+          if (self.isJson(data)) {
+            $(location).attr('href', self.options.redirectUrl);
+          } else {
+            $('.results').html(data);
+            setTimeout(self.removeNotification, 4000);
+            self.contactForm[0].reset();
+          }
         },
         error:  function(xhr, str){
           console.log('Error: ' + xhr.responseCode);
         }
       });
     },
-    removeNotification: function(){
+    removeNotification: function() {
       $('.alert').fadeOut(2000);
+    },
+    isJson: function(str) {
+      try {
+        JSON.parse(str);
+      }
+      catch (e) {
+        return false;
+      }
+      return true;
     }
   };
 
