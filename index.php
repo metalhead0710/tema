@@ -27,4 +27,5 @@ $dict = parse_ini_file(APP . '/lang/' . $_SESSION['lang'].'.ini');
 
 $router = new App\Components\Router();
 
+// Öÿ ñğàíü ñòàğòèòü ğîóòåğ
 $router->run();
